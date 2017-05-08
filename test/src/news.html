@@ -50,13 +50,17 @@
 				}
 			}]
 		});
-		var contentWebview = null;
+		/*var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap',function () {
 			if(contentWebview==null){
 				contentWebview = plus.webview.currentWebview().children()[0];
 			}
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
-		});
+		});*/
+
+		$('body').on('touch',function(){
+			alert(1)
+		})
 	</script>
 	</body>
 </html>
