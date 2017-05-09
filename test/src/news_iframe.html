@@ -60,6 +60,7 @@
             flex-wrap:wrap;
             padding-left: 1rem;
             padding-right: 1rem;
+            width: 19rem;
         }
         .content_p_top{
         	display: flex; 
@@ -71,7 +72,10 @@
         	overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
+<<<<<<< HEAD
 			width: 14.1rem;
+=======
+>>>>>>> origin/master
         }
         .left_span{
         	font-size: 1.2rem;
@@ -98,6 +102,8 @@
 			</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.0.slim.min.js"></script>
+
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -121,7 +127,11 @@
 					for (var i = cells.length, len = i + 3; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
+<<<<<<< HEAD
 						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">邮件</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方郭德纲SD敢达的法国大使馆电饭锅</p></div><img src="../images/已读.png" style="height: 1.5rem;"/></a>';
+=======
+						li.innerHTML = '<a href="#" onclick="function_1()"><img src="../images/发件人.png"/><div class="content_p content_p_bottom"><p class="content_p_top"><span>某某某</span><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p>哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多世纪东方快乐就是考虑房价是考虑房价圣诞快乐京东方看来都是荆防颗粒上到几点分开了圣诞节快乐放假负少发送到是</p></div><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></a>';
+>>>>>>> origin/master
 						//下拉刷新，新纪录插到最前面;
 						table.insertBefore(li, table.firstChild);
 					}
@@ -140,7 +150,11 @@
 					for (var i = cells.length, len = i + 5; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
+<<<<<<< HEAD
 						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方根深蒂固的水电费是非得失</p></div><img src="../images/未读.png" style="height: 1.5rem;"/></a>';
+=======
+						li.innerHTML = '<a href="#" onclick="function_1()"><img src="../images/发件人.png"/><div class="content_p content_p_bottom"><p class="content_p_top"><span>某某某</span><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p>哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多世纪东方快乐就是考虑房价是考虑房价圣诞快乐京东方看来都是荆防颗粒上到几点分开了圣诞节快乐放假负少发送到是</p></div><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></a>';
+>>>>>>> origin/master
 						table.appendChild(li);
 					}
 				}, 1500);
@@ -157,6 +171,23 @@
 					mui('#pullrefresh').pullRefresh().pullupLoading();
 				});
 			}
+
+			$('.content_li').on('touchend',function(){
+				alert(1)
+			})
+			var buff = true;
+			var function_1 = function(){
+				$(".content_li").unbind("click").click(function(e){
+					var $index = $(this).index()
+					console.log($index);
+					$('.content_p').eq($index).toggleClass('content_p_bottom');
+					$('.right_img').eq($index).attr('src','../images/已读.png')
+				});
+			}
+			$("#pullrefresh").on('tap', 'a', function (event) {
+				this.click();
+			});
+
 		</script>
 	</body>
 </html>
