@@ -130,7 +130,7 @@ a{
     min-height: 100%;
     p{
         color: white;
-        font-size: 20px;
+        font-size: 0.9rem;
     }
     i{
         font-size: 22px;
@@ -446,9 +446,13 @@ a{
             padding-bottom: 0.5rem;
             .font_size{
                 font-size: 0.8rem;
+                margin-bottom:0.1rem;
             }
             p{
                 margin-bottom: 0;
+            }
+            .mar_bottom{
+                margin-bottom: 0.5rem;
             }
         }
         .permit_center{
@@ -470,7 +474,7 @@ a{
     .permit_rwmimg{
         @include register_flex;
         @include register_center;
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         .permit_rwmimg_box{
             width: 80%;
             background-color: #F8F6F7;
@@ -660,7 +664,9 @@ a{
 
 @media screen and (device-width: 320px){
 //@media screen and (device-aspect-ratio: 40/71) {
-
+    .permit_rwmimg{
+        margin-top: 1rem;
+    }
     .caller_details_btn{
         height: 1.8rem;
     }
@@ -706,6 +712,8 @@ a{
             margin-left: 0;
         }
     }
+    
+    
 }
 
 @media screen and (device-width: 375px){
@@ -798,13 +806,15 @@ a{
     
 //------------------------------------------------public     chepai    
 #cp_public_input{
-    width: 7.5rem;
+    width: 8.5rem;
     margin-left: 0.5rem;
 }
 #cp_public_span{
     width: 2.4rem;
 }
 
+
+//-------------------------------------------- placeholder   color
 ::-webkit-input-placeholder { /* WebKit browsers */ 
 color: FFFFF0; 
 }

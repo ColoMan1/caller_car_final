@@ -71,7 +71,7 @@
         	overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			width: 15rem;
+			width: 14.1rem;
         }
         .left_span{
         	font-size: 1.2rem;
@@ -79,6 +79,11 @@
         .right_span{
         	font-size: 0.9rem;
         	color: #427DE5;
+        }
+        @media screen and (device-width: 320px){
+        	.content_p_bottom{
+        		width: 12.3rem;
+        	}
         }
 		</style>
 	</head>
@@ -116,7 +121,7 @@
 					for (var i = cells.length, len = i + 3; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">邮件</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆....餗水电费胜多负少发送到是</p></div><img src="../images/已读.png" style="height: 1.5rem;"/></a>';
+						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">邮件</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方郭德纲SD敢达的法国大使馆电饭锅</p></div><img src="../images/已读.png" style="height: 1.5rem;"/></a>';
 						//下拉刷新，新纪录插到最前面;
 						table.insertBefore(li, table.firstChild);
 					}
@@ -135,7 +140,7 @@
 					for (var i = cells.length, len = i + 5; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆....餗水电费胜多负少发送到是</p></div><img src="../images/未读.png" style="height: 1.5rem;"/></a>';
+						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方根深蒂固的水电费是非得失</p></div><img src="../images/未读.png" style="height: 1.5rem;"/></a>';
 						table.appendChild(li);
 					}
 				}, 1500);

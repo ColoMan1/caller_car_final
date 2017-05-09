@@ -18,7 +18,7 @@ a { text-decoration: none; }
 .bigbox .span_box span { color: white; font-size: 0.7rem; }
 
 .all_bigbox { padding-top: 0.5rem; background: url(../images/bg.png) no-repeat; background-size: cover; min-height: 100%; }
-.all_bigbox p { color: white; font-size: 20px; }
+.all_bigbox p { color: white; font-size: 0.9rem; }
 .all_bigbox i { font-size: 22px; }
 
 p { font-size: 0.9rem; display: -webkit-flex; /* Safari */ display: flex; justify-content: center; color: #FFFFFF; margin-top: 0; }
@@ -86,15 +86,16 @@ p .yh_name { color: white; position: absolute; right: 1rem; font-size: 15px; top
 .permit_box_two { padding-bottom: 0; margin-top: 0.3rem; }
 .permit_box_two span { width: 7.5rem; }
 .permit_box_two .permit_box_double { background: url(../images/permit.png) no-repeat 100% 100%; background-size: 23%; padding-bottom: 0.5rem; }
-.permit_box_two .permit_box_double .font_size { font-size: 0.8rem; }
+.permit_box_two .permit_box_double .font_size { font-size: 0.8rem; margin-bottom: 0.1rem; }
 .permit_box_two .permit_box_double p { margin-bottom: 0; }
+.permit_box_two .permit_box_double .mar_bottom { margin-bottom: 0.5rem; }
 .permit_box_two .permit_center { display: -webkit-flex; /* Safari */ display: flex; justify-content: center; }
 .permit_box_two .permit_center p { margin-bottom: 0; }
 
 .permit_deta { display: -webkit-flex; /* Safari */ display: flex; justify-content: center; margin-top: 0.2rem; }
 .permit_deta p { font-size: 0.7rem; }
 
-.permit_rwmimg { display: -webkit-flex; /* Safari */ display: flex; justify-content: center; margin-top: 3rem; }
+.permit_rwmimg { display: -webkit-flex; /* Safari */ display: flex; justify-content: center; margin-top: 2.5rem; }
 .permit_rwmimg .permit_rwmimg_box { width: 80%; background-color: #F8F6F7; border-radius: 5px; padding: 0.2rem; }
 .permit_rwmimg .permit_rwmimg_box .permit_rwmimg_box_img1 { width: 100%; height: 4rem; }
 .permit_rwmimg .permit_rwmimg_box .permit_rwmimg_box_img2 { width: 50%; height: 6rem; }
@@ -135,7 +136,8 @@ p .yh_name { color: white; position: absolute; right: 1rem; font-size: 15px; top
 .all_bigbox #selectStyle #select option:hover { color: #fff; }
 .all_bigbox #selectStyle #select option:checked { background: #535353; color: #fff; }
 
-@media screen and (device-width: 320px) { .caller_details_btn { height: 1.8rem; }
+@media screen and (device-width: 320px) { .permit_rwmimg { margin-top: 1rem; }
+  .caller_details_btn { height: 1.8rem; }
   .locale_register_box { padding-top: 0.5rem; }
   .locale_register_box .locale_register_btn { margin: 0.8rem 0; }
   .locale_register_box select { background-color: rgba(255, 255, 255, 0.3); margin: 0; line-height: 13px; height: 1.6rem; }
@@ -164,7 +166,7 @@ p .yh_name { color: white; position: absolute; right: 1rem; font-size: 15px; top
 
 #public_yzsj, #public_yzmm { margin: 0; font-size: 0.7rem; color: red; }
 
-#cp_public_input { width: 7.5rem; margin-left: 0.5rem; }
+#cp_public_input { width: 8.5rem; margin-left: 0.5rem; }
 
 #cp_public_span { width: 2.4rem; }
 
