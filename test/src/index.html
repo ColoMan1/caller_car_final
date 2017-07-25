@@ -7,8 +7,71 @@
 		<title>enter</title>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<style type="text/css">
+			.box_yd{
+			    position: absolute;
+			    width: 5rem;
+			    color: white;
+			    z-index: 99;
+			    border-radius: 5px;
+			    padding: 5px;
+				border: 2px solid #CCCCCC;
+				left: 10%;
+			}
+			.box_yd:before{
+		        position: absolute;
+			    content: "";
+			    width: 0;
+			    height: 0;
+			    left: 24px;
+			    top: -10px;
+			    border-bottom: 10px solid #CCCCCC;
+			    border-left: 10px solid transparent;
+			    border-right: 10px solid transparent; 
+			}
+			.box_yd:after{
+			    position: absolute;
+			    content: "";
+			    width: 0;
+			    height: 0;
+			    left: 27px;
+			    top: -7px;
+			    border-bottom: 7px solid rgba(0,0,0,1);
+			    border-left: 7px solid transparent;
+			    border-right: 7px solid transparent;
+			}
+			.asd{
+			    background-color: rgba(0,0,0,0.7);
+			    z-index: 88;
+			    height: 100%;
+			    width: 100%;
+			    position: absolute;
+			}
+			.btn_box{
+				display: flex;
+				display: -webkit-flex;
+				justify-content: flex-end;
+			}
+			.btn_tg{
+				position: fixed;
+				right: 1rem;
+				top: 1rem;
+				z-index: 99;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="yd_bigbox">
+			<button class="btn_tg">跳过</button>
+			<div class="asd"></div>
+			<div class="box_yd box_yd2"><span>账号账号账号账号账账号号账号账号账号账号账号账号账号</span>
+				<div class="btn_box"><button class="btn1">下一步</button></div>
+			</div>
+			<div class="box_yd" style="display: none;"><span>密码密码密码密码密码密码密码密码密码密码密码密码密码</span>
+				<div class="btn_box"><button class="btn2">完成</button></div>
+			</div>
+		</div>
+
 		<div class="bigbox">
 			<div class="logo_box">
 				<img src="../images/logo.png" class="register_logo"/>
@@ -39,5 +102,33 @@
 		<script src="../js/demo.js"></script>
 		<script src="../js/jquery-3.2.0.slim.min.js"></script>
 		<script src="../js/index.js"></script>
+		<script type="text/javascript">
+			$('.yd_img1').click(function(){
+				$('.yd_img1').css('display','none')
+			})
+			$('.yd_img2').click(function(){
+				$('.yd_img2').css('display','none')
+			})
+			$('.box_yd').css('width',document.body.offsetWidth-85)
+			$('.box_yd').css('top',window.screen.availHeight/2)
+			
+			$('.box_yd2').css('width',document.body.offsetWidth-85)
+			$('.box_yd2').css('top',window.screen.availHeight/2-80)
+			if(window.screen.availHeight < 600){
+				$('.box_yd2').css('top',window.screen.availHeight/2-60)
+			}
+			$('.btn1').on('click',function(){
+				$('.box_yd').css('display','block')
+				$('.box_yd2').css('display','none')
+			})
+			$('.btn2').on('click',function(){
+				$('.yd_bigbox').css('display','none')
+			})
+			$('.btn_tg').click(function(){
+				$('.yd_bigbox').css('display','none')
+			})
+			
+			//console.log(window.screen.availHeight)
+		</script>
 	</body>
 </html>

@@ -7,13 +7,26 @@
 		<title>访客</title>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<style type="text/css">
+			.mark_right{
+				position: absolute;right: 0;
+				height: 1rem;
+				width: 1rem;
+				background: url(../images/未读信息.png)no-repeat;
+				background-size: 100%;
+				color: white;
+				text-align: center;
+				line-height: 1rem;
+				font-size: 0.7rem;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="all_bigbox">
-			<p>汉脑访客系统
+			<p><img src="../images/lsd.png" style="height: 25px;width: 73px;"/>
+				<span>汉脑访客系统</span>
 				<img src="../images/退出系统.png" alt="" style="height: 1.5rem;width: 3rem;position: absolute;right: 0.5rem;top: -0.3rem"/>
 			</p>
-			<img src="../images/退出系统.png" class="tc_img" style="display: none;"/>
 			<div class="first_box">
 				<div class="first_left">
 					<img src="../images/外出申请.png" alt="" />
@@ -26,10 +39,11 @@
 			</div>
 			<div class="first_box" style="padding-bottom: 12rem;">
 				<div class="first_left">
-					<img src="../images/我的通行证.png" alt="" />
-					<p>我的通行证</p>
+					<img src="../images/我的信息.png" alt="" />
+					<p>我的信息</p>
 				</div>
-				<div class="first_right">
+				<div class="first_right" style="position: relative;">
+					<div class="mark_right">99<span style="position: absolute;top: -5px;display: none;">+</span></div>
 					<img src="../images/消息通知.png" alt="" />
 					<p>消息通知</p>
 				</div>

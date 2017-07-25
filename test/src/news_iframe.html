@@ -8,17 +8,21 @@
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
-
+		<link rel="stylesheet" href="../css/weui.min.css">
 		<title></title>
 		<style type="text/css">
+		li{
+			list-style: none;
+		}
 		.content_li{
             border-bottom: 1px solid #F1F1F1;
             margin-top: 1.5rem;
             padding-bottom: 1.5rem;
+            position: relative;
         }
         a{
         	display: flex; 
-            display: -webkit-flex; 
+            display: -webkit-flex;
             align-items: center;
             justify-content: space-between;
         }
@@ -34,9 +38,6 @@
         #pullrefresh{
         	background: url(../images/bg.png) no-repeat;
         	background-size: cover;
-/*		    background-size: cover;
-		    min-height: 100%;
-		    position: relative;*/
         }
         p{
         	margin: 0;
@@ -50,17 +51,13 @@
         .pp_color{
         	color: red;
         }
-        span{
-        	margin-left: 0.5rem;
-        }
         .content_p{
         	display: flex; 
             display: -webkit-flex; 
             align-items: center;
             flex-wrap:wrap;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 19rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
         .content_p_top{
         	display: flex; 
@@ -69,24 +66,121 @@
             width:100%;
         }
         .content_p_bottom{
+        	color: #F1F1F1;
+        	margin-top: 0.5rem;
         	overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-<<<<<<< HEAD
-			width: 14.1rem;
-=======
->>>>>>> origin/master
+        }
+        .aaa{
+        	color: #F1F1F1;
+        	margin-top: 0.5rem;
         }
         .left_span{
         	font-size: 1.2rem;
+        	overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
         }
         .right_span{
         	font-size: 0.9rem;
         	color: #427DE5;
+
         }
-        @media screen and (device-width: 320px){
-        	.content_p_bottom{
-        		width: 12.3rem;
+        .ul_box{
+        	display: flex;
+        	display: -webkit-flex;
+        	justify-content: space-between;
+
+        }
+        ul{
+        	padding: 0;        	
+        }
+        .btn_sh{
+        	position: absolute;
+        	right: 2px;
+        	bottom: 3px;
+
+        }
+        .boxbox{
+		    background-color: rgba(0,0,0,0.7);
+		    z-index: 88;
+		    height: 100%;
+		    width: 100%;
+		    position: absolute;
+		    display: -webkit-flex;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+
+		.sh_box{
+			height: 8rem;
+			width: 15rem;
+			background-color: #F1F1F1;
+			border-radius: 5px;
+			position: relative;
+		}
+		.btn_1,.btn_2,.btn_3{
+			height: 2rem;
+			width: 5rem;
+		}
+		.btn_3{
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}
+		.new_span{
+			position: absolute;
+			top: 3px;
+			right: 5px;
+			z-index: 99;
+		}
+		.button_box{
+			display: -webkit-flex;
+			display: flex;
+		    justify-content: space-around;
+		    align-items: center;
+		    margin: auto;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		}
+		.weui-dialog__hd{
+			position: relative;
+		}
+		.xx{
+			position: absolute;
+			top: 3px;
+			right: 5px;
+			z-index: 999999999999;
+		}
+        @media screen and (min-device-width: 320px){/*这里的媒询项目中移到了index.css里面*/
+        	.left_span{
+	        	font-size: 1.2rem;
+	        	margin:0 0.5rem;
+	        	width: 5rem;
+        	}
+        }
+        @media screen and (min-device-width: 360px){
+        	.left_span{
+	        	font-size: 1.2rem;
+				width: 8rem;
+        	}
+        }
+        @media screen and (min-device-width: 375px){
+        	.left_span{
+	        	font-size: 1.2rem;
+				width: 8rem;
+        	}
+        }
+        @media screen and (min-device-width: 412px){
+        	.left_span{
+	        	font-size: 1.2rem;
+	        	margin:0 1rem;
+	        	width: 10rem;
         	}
         }
 		</style>
@@ -101,9 +195,11 @@
 				</ul>
 			</div>
 		</div>
+		
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/jquery-3.2.0.slim.min.js"></script>
-
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/weui.min.js"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -127,11 +223,7 @@
 					for (var i = cells.length, len = i + 3; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-<<<<<<< HEAD
-						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">邮件</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方郭德纲SD敢达的法国大使馆电饭锅</p></div><img src="../images/已读.png" style="height: 1.5rem;"/></a>';
-=======
-						li.innerHTML = '<a href="#" onclick="function_1()"><img src="../images/发件人.png"/><div class="content_p content_p_bottom"><p class="content_p_top"><span>某某某</span><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p>哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多世纪东方快乐就是考虑房价是考虑房价圣诞快乐京东方看来都是荆防颗粒上到几点分开了圣诞节快乐放假负少发送到是</p></div><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></a>';
->>>>>>> origin/master
+						li.innerHTML = '<div onclick="function_1()"><ul class="ul_box"><img src="../images/发件人.png"/><li class="content_p"><p class="content_p_top"><span>某某某</span><span class="left_span">一体电饭锅梵蒂冈的化系统</span><span class="right_span">1小时前</span></p></li><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></ul><ul class="aaa content_p_bottom">哪里点分开了圣诞节快乐放收到回复几点开始房简单快乐赶紧的看来赶紧的风口浪尖刚看了</ul></div>';
 						//下拉刷新，新纪录插到最前面;
 						table.insertBefore(li, table.firstChild);
 					}
@@ -147,14 +239,10 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.content_li');
-					for (var i = cells.length, len = i + 5; i < len; i++) {
+					for (var i = cells.length, len = i + 2; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-<<<<<<< HEAD
-						li.innerHTML = '<a href="#"><img src="../images/发件人.png"/><div class="content_p"><p class="content_p_top"><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p class="content_p_bottom">哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多负少发送到是地方根深蒂固的水电费是非得失</p></div><img src="../images/未读.png" style="height: 1.5rem;"/></a>';
-=======
-						li.innerHTML = '<a href="#" onclick="function_1()"><img src="../images/发件人.png"/><div class="content_p content_p_bottom"><p class="content_p_top"><span>某某某</span><span class="left_span">一体化系统</span><span class="right_span">1小时前</span></p><p>哪里你发的第三方是的冯绍峰鼎折覆餗水电费胜多世纪东方快乐就是考虑房价是考虑房价圣诞快乐京东方看来都是荆防颗粒上到几点分开了圣诞节快乐放假负少发送到是</p></div><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></a>';
->>>>>>> origin/master
+						li.innerHTML = '<div onclick="function_1()"><ul class="ul_box"><img src="../images/发件人.png"/><li class="content_p"><p class="content_p_top"><span>某某是某</span><span class="left_span">一体电饭锅梵蒂冈的化系统</span><span class="right_span">1小时前</span></p></li><img class="right_img" src="../images/未读.png" style="height: 1.5rem;"/></ul><ul class="aaa content_p_bottom"><li>哪里点分开了圣诞节快乐放收到回复几点开始房简单快乐赶紧的看来赶紧的风口浪尖刚看了</li></ul><button onclick="function_2()" type="button" class="btn btn-primary btn-lg btn_sh">审核</button></div>';
 						table.appendChild(li);
 					}
 				}, 1500);
@@ -171,23 +259,69 @@
 					mui('#pullrefresh').pullRefresh().pullupLoading();
 				});
 			}
-
-			$('.content_li').on('touchend',function(){
-				alert(1)
-			})
-			var buff = true;
+			var $index; 
 			var function_1 = function(){
 				$(".content_li").unbind("click").click(function(e){
-					var $index = $(this).index()
-					console.log($index);
-					$('.content_p').eq($index).toggleClass('content_p_bottom');
+					$index = $(this).index()
+					//console.log($index);
+					$('.aaa').eq($index).toggleClass('content_p_bottom');
+					//$('.aaa li').eq($index).css('width','80%');
 					$('.right_img').eq($index).attr('src','../images/已读.png')
 				});
 			}
-			$("#pullrefresh").on('tap', 'a', function (event) {
+			
+			$("#pullrefresh").on('tap','div',function (event) {
 				this.click();
 			});
+			var function_2 = function(){
+				//var $th_1 = $('<tr class="boxbox"><td class="sh_box"><span class="new_span" onclick="function_3()">X</span><div  class="button_box"><button onclick="function_4()" class="btn_1">通过</button><button onclick="function_5()" class="btn_2">不通过</button></div></td></tr>');
+				  //var $th_1 = $('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">审核</h4></div><div class="modal-body">是否通过审核?</div><div class="modal-footer"><button type="button" onclick="function_4()" class="btn btn-default" data-dismiss="modal">通过</button><button type="button" class="btn btn-primary">不通过</button></div></div></div></div>')
+				  //var $parent = $("#pullrefresh");
+				  //$parent.append($th_1);
 
+				weui.confirm('审核', {
+				    title: '审核通不通过？',
+				    buttons: [{
+				        label: '通过',
+				        type: 'primary',
+				        onClick: function(){
+				        	console.log('通过')
+				        	$('.btn_sh').eq($index).css('display','none')
+				        }
+				    }, {
+				        label: '不通过',
+				        type: 'default',
+				        onClick: function(){
+				        	$('.btn_sh').eq($index).css('display','none')
+				        	console.log('不通过') 
+				        }
+				    },{
+				        label: '忽略',
+				        type: 'default',
+				        onClick: function(){
+				        	console.log('忽略') 
+				        }
+				    }]
+				});
+			}
+			mui("#pullrefresh").on('tap', 'a', function (event) {
+				this.click();
+			});
+			mui("#pullrefresh").on('tap', 'span', function (event) {
+				this.click();
+			});
+			var function_4 = function(){
+				console.log($index);
+
+				$('.content_li').eq($index).find($('.btn_sh')).css('display','none')
+			}
+			var function_5 = function(){
+
+				$('.content_li').eq($index).find($('.btn_sh')).css('display','none')
+			}
+			mui("#pullrefresh").on('tap', 'button', function (event) {
+				this.click();
+			});
 		</script>
 	</body>
 </html>

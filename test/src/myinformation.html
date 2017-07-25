@@ -24,25 +24,36 @@
 				</a>
 			</p>
 			<div class="record_top">
-				<p>外出申请信息</p>
+				<p>我的信息</p>
 			</div>
-			<div class="caller_details_content">
+			<div class="caller_details_content" style="padding-bottom: 15rem;">
 				<table>
 					<tr>
-						<td><span>姓名：</span><input type="text" name="" id="" value=""/></td>
+						<td><span>姓名：</span><input type="text" name="" id="" value="" /></td>
 					</tr>
 					<tr>
-						<td><span>手机：</span><input type="text" name="" id="" value="" /></td>
+						<td><span>工号：</span><input type="text" name="" id="" value="" /></td>
 					</tr>
 					<tr>
-						<td><span>日期：</span><input onfocus="this.blur();" id="demo1" type="text" readonly="" name="input_date" data-lcalendar="2000-01-01,2018-01-29" /></td>
+						<td><span>手机：</span><input id="demo1" type="text"/></td>
 					</tr>
 					<tr>
-						<td><span>时间：</span><input style="width: 47%;" onfocus="this.blur();" value="00:00" id="demo5" type="text" readonly=""/>
-							<i><em>~</em></i>
-							<input style="width: 45%;" onfocus="this.blur();" id="demo6" type="text" value="00:00" readonly=""/>
+						<td>
+							<span>岗位：</span>
+							<div class="selectStyle">
+								<select name="" class="select">
+									<option value="">学生会主席</option>
+									<option value="">总统</option>
+									<option value="">皖</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+								</select>
+								<i class="iconfont">&#xe627;</i>
+							</div>
 						</td>
-					<tr>
+					</tr>
 					<tr>
 						<td>
 							<span>车牌：</span>
@@ -60,13 +71,9 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
-						<td><span>事由: </span><textarea type="text" name="" id="" value="" style="height: 3rem;background-color: rgba(255, 255, 255, 0.3);border: 1px solid #F1F1F1;margin-bottom: 0;"></textarea></td>
-					</tr>
 				</table>
 			</div>
-			<button class="caller_details_btn">申请访问</button>
-			<div class="bottom_box">
+			<div class="bottom_box public_bottom_style">
 				<div class="register_buttom">
 					<a href="#"><img src="../images/浙江汉脑.png" /></a>
 					<span></span>
@@ -79,29 +86,5 @@
 		<script src="../js/jquery-3.2.0.slim.min.js"></script>
 		<script src="../js/index.js"></script>
 		<script src="../js/LCalendar.js"></script>
-		<script>
-		var now = new Date();
-		demo1.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
-		
-			var calendar = new LCalendar();
-			calendar.init({
-				'trigger': '#demo1', //标签id
-				'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
-				'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
-				'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 3) + '-' + new Date().getDate()//最大日期
-			});
-			var calendartime = new LCalendar();
-		    calendartime.init({
-		        'trigger': '#demo5',
-		        'type': 'time'
-		    });
-		    var calendartime = new LCalendar();
-		    calendartime.init({
-		        'trigger': '#demo6',
-		        'type': 'time'
-		    });
-			
-		</script>
 	</body>
-
 </html>

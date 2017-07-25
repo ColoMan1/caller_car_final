@@ -34,9 +34,6 @@
         #pullrefresh{
         	background: url(../images/bg.png) no-repeat;
         	background-size: cover;
-/*		    background-size: cover;
-		    min-height: 100%;
-		    position: relative;*/
         }
         p{
         	margin: 0;
@@ -53,6 +50,33 @@
         span{
         	margin-left: 0.5rem;
         }
+        div{
+        	color: #F1F1F1;
+        }
+        .div_content{
+
+        	margin-top: 0.5rem;
+        	overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+        }
+        .record_ul_box{
+        	padding: 0;
+		    display: flex;
+		    display: -webkit-flex;
+		    justify-content: space-between;
+        }
+        .record_li_box{
+		    display: flex;
+		    display: -webkit-flex;
+		    align-items: center;        	
+        }
+        ul{
+        	list-style-type:none;
+        }
+        .aaa{
+        	margin-top: 0.5rem;
+        }
 		</style>
 	</head>
 	<body>
@@ -65,7 +89,10 @@
 				</ul>
 			</div>
 		</div>
+		<div onclick="function_2()"><ul><li><img src="../images/六.png"/><span>03-24 10:12:12</span></li><li>方大</li><li class="pp_color p_color">异常</li></ul><li class="aaa div_content">客户沟换手机款到发货第三节课发货速度后付款数据恢复通</li></div>
+
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.0.slim.min.js"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -89,7 +116,7 @@
 					for (var i = cells.length, len = i + 3; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-						li.innerHTML = '<a href="#"><p><img src="../images/二.png"/><span>03-24 10:12:12</span></p><p>客户沟通</p><p>方大</p><p class=" p_color">正常</p></a>';
+						li.innerHTML = '<div onclick="function_2()"><ul class="record_ul_box"><li class="record_li_box"><img src="../images/六.png"/><span>03-24 10:12:12</span></li><li>方大</li><li class="pp_color p_color">异常</li></ul><li class="aaa div_content">付款数据红烧豆腐就是分手的距离反馈就是的打开了房间恢复通</li></div>';
 						//下拉刷新，新纪录插到最前面;
 						table.insertBefore(li, table.firstChild);
 					}
@@ -108,7 +135,7 @@
 					for (var i = cells.length, len = i + 5; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'content_li';
-						li.innerHTML = '<a href="#"><p><img src="../images/六.png"/><span>03-24 10:12:12</span></p><p>客户沟通</p><p>方大</p><p class="pp_color p_color">异常</p></a>';
+						li.innerHTML = '<div onclick="function_2()"><ul class="record_ul_box"><li class="record_li_box"><img src="../images/六.png"/><span>03-24 10:12:12</span></li><li class="record_li_box"><span>方大</span></li><li class="pp_color p_color record_li_box"><span>异常</span></li></ul><li class="aaa div_content">付款数据红烧豆腐就是分手的距离反馈就是的打开了房间恢复通</li></div>';
 						table.appendChild(li);
 					}
 				}, 1500);
@@ -125,6 +152,17 @@
 					mui('#pullrefresh').pullRefresh().pullupLoading();
 				});
 			}
+			
+			var function_2 = function(){
+				$(".content_li").unbind("click").click(function(e){
+					var $index = $(this).index()
+					console.log($index);
+					$('.aaa').eq($index).toggleClass('div_content');
+				});
+			}
+			$("#pullrefresh").on('tap','div',function (event) {
+				this.click();
+			});
 		</script>
 	</body>
 </html>
