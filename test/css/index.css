@@ -160,9 +160,9 @@ p .yh_name { color: white; position: absolute; right: 1rem; font-size: 15px; top
   .locale_register_box #demo2 { margin-left: 0.5rem; } }
 @media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) { #demo2 { margin-left: 0.5rem; } }
 .bottom_box { background-color: white; }
-.bottom_box .register_buttom { width: 13rem; display: -webkit-flex; /* Safari */ display: flex; justify-content: space-between; margin-left: auto; margin-right: auto; }
+.bottom_box .register_buttom { display: -webkit-flex; /* Safari */ display: flex; justify-content: space-around; }
 .bottom_box .register_buttom img { height: 1.5rem; margin-bottom: 0.2rem; margin-top: 0.2rem; }
-.bottom_box .register_buttom span { border-left: 1px solid #CCCCCC; height: 1rem; margin-top: 0.5rem; }
+.bottom_box .register_buttom span { color: black; height: 1rem; margin-top: 0.5rem; font-size: 0.7rem; }
 
 #public_yzsj, #public_yzmm { margin: 0; font-size: 0.7rem; color: red; }
 
